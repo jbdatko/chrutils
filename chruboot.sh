@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh -e
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -15,11 +15,11 @@
 CHROME="chromeos"
 CHRUBUNTU="chrubuntu"
 
-if [ "$1" == $CHROME ]
+if [ "$1" = $CHROME ]
 then
     sudo cgpt add -i 6 -P 0 -S 1 /dev/mmcblk0
     echo "Next time you reboot, you will boot into ChomeOS"
-elif [ "$1" == $CHRUBUNTU ]
+elif [ "$1" = $CHRUBUNTU ]
 then
     sudo cgpt add -i 6 -P 5 -S 1 /dev/mmcblk0
     echo "Next time you reboot, you will boot into ChrUbuntu"
