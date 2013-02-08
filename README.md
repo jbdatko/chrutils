@@ -20,8 +20,10 @@ Samsung ARM chromebook, so if you tried it with some other hardware, your
 results may vary...
 
 There are two ways to run it:
-    sh -e chruboot.sh chromeos
-    sh -e chruboot.sh chrubuntu
+```
+sh -e chruboot.sh chromeos
+sh -e chruboot.sh chrubuntu
+```
 
 The argument passed in sets the active boot partition and it will take affect
 on the next reboot.
